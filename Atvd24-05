@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+na
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {            
+          
+           int[] valores = new int[10];
+        for (int i = 0; i < 10; i++) {
+            Console.Write($"Digite o {i+1}º valor: ");
+            valores[i] = int.Parse(Console.ReadLine());
+        }
+
+     
+        double media = 0;
+        foreach (int valor in valores) {
+            media += valor;
+        }
+        media /= valores.Length;
+
+        
+        int maiores = 0;
+        foreach (int valor in valores) {
+            if (valor > media) {
+                maiores++;
+            }
+        }
+
+   
+        Console.WriteLine($"A média aritmética dos valores digitados é {media:F2}.");
+        Console.WriteLine($"{maiores} valores digitados são maiores do que a média calculada.");
+    }
+
+
+      
+      
+    }
+}
